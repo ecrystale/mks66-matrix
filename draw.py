@@ -4,14 +4,14 @@ from matrix import *
 
 def draw_lines( matrix, screen, color ):
     i=0
-    while i<matrix.size()-1:
+    while i<len(matrix)-1:
         draw_line(matrix[i][0], matrix[i][1], matrix[i+1][0], matrix[i+1][1], screen, color)
         i+=1
     #pass
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    matrix.append[x0,y0,z0,1]
-    matrix.append[x1,y1,z1,1]
+    add_point(matrix,x0,y0,z0)
+    add_point(matrix,x1,y1,z1)
     #pass
 
 def add_point( matrix, x, y, z=0 ):

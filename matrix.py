@@ -15,35 +15,43 @@ def print_matrix( matrix ):
     row=0
     col=0
     box=""
-    while col<matrix[0].length():
-        while row<matrix.length():
-            box+=matrix[row][col]
+    while col<len(matrix[0]):
+        while row<len(matrix):
+            box+=str(matrix[row][col])+" "
             row+=1
         row=0
         col+=1
+        box+="\n"
     print (box)
     #pass
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    for i in matrix:
-        for j in i:
+    i=0
+    while i<len(matrix):
+        j=0
+        while j<len(matrix[i]):
             if i!=j:
                 matrix[i][j]=0
             if i==j:
                 matrix[i][j]=1
+            j+=1
+        i+=1
     #pass
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    for i in m1:
+    i=0
+    while i<len(m1[0]):
         j=0
-        while j < i.length:
-            for k in m2:
-                k[j]
-        j+=1
+        while j < len(m1):
+            m1[j][i]
+            while k in m2:
+                #k[i]=k[
+            j+=1
+        i+=1
     #pass
 
 
