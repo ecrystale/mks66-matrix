@@ -43,15 +43,23 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    i=0
-    while i<len(m1[0]):
-        j=0
-        while j < len(m1):
-            m1[j][i]
-            while k in m2:
+    m=[]
+    for i in m1:
+        list2=[]
+        col=0
+        for j in i:
+            count=0
+            c=0
+            for a in m2:
+                a[c]
+                while k in m2:
+                    count+=a
                 #k[i]=k[
             j+=1
+            list2.append[count]
+        m.append(list2)
         i+=1
+    m2=m
     #pass
 
 
