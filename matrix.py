@@ -44,7 +44,42 @@ def ident( matrix ):
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
     m=[]
-    for i in m1:
+    for i in m2:
+        list2=[]
+        maxed=len(m1[0])
+        count=0
+        while count<maxed:
+            mark=0
+            sumed=0
+            for j in m1:
+                sumed+=j[count]*i[mark]
+                mark+=1
+            list2.append(sumed)
+            count+=1
+        m.append(list2)
+    m2orig=len(m2)
+    mlen=0
+    for i in m:
+        if mlen>=m2orig:
+            m2.append[i]
+        if mlen<m2orig:
+            m2[mlen]=m[mlen]
+        mlen+=1
+    #m2=m
+    
+'''
+        while count<maxed:
+            list2=[]
+            sumed=0
+            c=0
+            for x in m1:
+                sumed=0
+                while c<maxed:
+                    sumed+=c*x[c]
+                    c+=1
+                list2.append(sumed)
+            
+            count+=1
         list2=[]
         col=0
         for j in i:
@@ -61,6 +96,7 @@ def matrix_mult( m1, m2 ):
         i+=1
     m2=m
     #pass
+'''
 
 
 
