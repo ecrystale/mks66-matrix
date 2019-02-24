@@ -3,7 +3,7 @@ from draw import *
 from matrix import *
 
 screen = new_screen()
-color = [ 0, 255, 0 ]
+color = [ 200, 0, 200 ]
 matrix = new_matrix()
 
 A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
@@ -28,12 +28,30 @@ matrix_mult(matrix,matrix2)
 print_matrix(matrix)
 print_matrix(matrix2)
 '''
+m=[]
+x1=0
+y1=250
+x2=250
+y2=500
+x3=500
+y3=0
+count=0
+change=1
+while x1!=x2 and y2!=y1:
+    add_edge(m,x1,y1,0,x2,y2,0)
+    add_edge(m,x2,y2,0,x3,y1,0)
+    add_edge(m,x3,y1,0,x2,y3,0)
+    add_edge(m,x2,y3,0,x1,y1,0)
+    x1+=1
+    y1+=1
+    x2-=1
+    y2-=1
+    x3-=1
+    y3+=1
+        
+    
+#add_edge(m,124,2,0,400,200,300)
+#print_matrix(m)
 
-'''print_matrix(matrix)
-add_edge(matrix,12,234,0,500,500,500)
-add_edge(matrix,124,2,0,400,200,300)
-print_matrix(matrix)'''
-draw_lines( matrix, screen, color )
-draw_lines( A, screen, color )
-draw_lines( B, screen, color )
+draw_lines( m, screen, color )
 display(screen)
